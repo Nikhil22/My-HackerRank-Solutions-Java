@@ -6,7 +6,7 @@ import java.util.regex.*;
 
 public class Solution {
     
-    /*
+    	/*
 		
 		Step 1: Advance as much as you can (AKA, increment index of array 'a' as long as a[index] =='0', -> keep advancing until the a[index + 1] is a '1')
 		Step 2: Check whether we can just jump and win the game
