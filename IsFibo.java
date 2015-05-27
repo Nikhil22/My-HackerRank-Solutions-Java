@@ -16,7 +16,6 @@ public class Solution {
             nMinusOne++;
         }
         
-        //assuming that it's fibo (for now)...
         int nMinusTwo = n - nMinusOne;
         while(nMinusTwo >0){
             int temp = nMinusTwo; 
