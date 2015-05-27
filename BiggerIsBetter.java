@@ -8,12 +8,12 @@ public class Solution {
     
     	/*
 		
-		int startEnd - The end index of the string that we start from
-		int compareWith - the index in the array that holds the character that we will compare the character found in index 'startEnd' with
-		Keep comparing until we reach the end of the string
-		IF AT ANY POINT during the loops, the char in index 'startEnd' is lexicographically > than the char in index 'compareWith', return accordingly (refer to return statement in the code)
+	int startEnd - The end index of the string that we start from
+	int compareWith - the index in the array that holds the character that we will compare the character found in index 'startEnd' with
+	Keep comparing until we reach the end of the string
+	IF AT ANY POINT during the loops, the char in index 'startEnd' is lexicographically > than the char in index 'compareWith', return accordingly (refer to return statement in the code)
 		
-	    */
+	*/
     
     static String biggerBetter(String abc){
         int startEnd = abc.length() -1; 
