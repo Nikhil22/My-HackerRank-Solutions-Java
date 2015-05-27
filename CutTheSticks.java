@@ -6,7 +6,7 @@ import java.util.regex.*;
 
 public class Solution {
     
-    /*
+    	/*
 	
 	Sort the array so that the smallest elements are at the front
 	Keep track of the minimum (should be array[0] since it has been sorted)	
