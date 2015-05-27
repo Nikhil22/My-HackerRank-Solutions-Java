@@ -6,6 +6,17 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+		
+		loops through the arrivals array. 
+		For each element in the array, if it's <=0, implies that the student represented by that array element is on time
+		incremenent thenumber fo students who showed up on time
+		"NO" means the class should NOT be cancelled
+		"YES" means the class SHOULD be cancelled
+		
+		
+	*/
+    
     public static String yesNo(int N, int K, int[] arrivals){
         int count = 0;
         for(int i =0; i< arrivals.length; i++){
