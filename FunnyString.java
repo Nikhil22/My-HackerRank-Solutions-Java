@@ -5,6 +5,17 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
+    
+    /*
+	Loop through the string on 2 seperate ends (therefore, use two seperate variables to keep track of the index)
+	On the left ends, calculate the difference (absolute value) between 
+	the current character and the character in the previous index
+	On the left ends, calculate the difference (absolute value) between
+	the current character and the character in the next index
+	Check if these values are equal (or nah)
+	If these values are not equal, exit loop - this is NOT a funny string
+	If the whole string has been looped through, and all values were equal, it is a funny string
+	*/
 
     static String funny(String S){
         int startS = 1;
