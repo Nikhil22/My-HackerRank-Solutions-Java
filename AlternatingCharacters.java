@@ -7,14 +7,14 @@ import java.util.regex.*;
 public class Solution {
     
     static int minDeletions(String s){
-        int min = 0;
+        int minDeletes = 0;
         for(int i = 1; i < s.length(); i++){
             if(s.charAt(i) == s.charAt(i-1)){
-                min++;
+                minDeletes++;
             }
         }
         
-        return min;
+        return minDeletes;
     }
 
     public static void main(String[] args) {
