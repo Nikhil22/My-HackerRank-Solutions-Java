@@ -8,9 +8,10 @@ public class Solution {
     
     	/*
 		
-	Divides the string into two parts
+	Split the string into two parts
 	For each character in the left half of the string, check if the right half contains it
-	If the right half does not contain, incrememnt the number of replacements needed by 1
+	If the right half does not contain the particular character, 
+	incrememnt the number of replacements needed by 1
 		
 	*/
     
