@@ -14,7 +14,7 @@ public class Solution {
               || paranthesis.charAt(i) == '['){
                 stack.push(new Character(paranthesis.charAt(i)));
 
-            } else{ //IGT why you need an 'else' here
+            } else{ 
             
             if(!stack.empty()){  
             
