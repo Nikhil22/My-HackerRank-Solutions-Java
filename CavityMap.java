@@ -6,8 +6,15 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+	Loop through the entire string; start at index 1 because we cannot have a cavity in the corner
+	Keep track of the current character, the previous character, as well as the next character
+	If the current character is greater than both the previous character and the next character,
+	mark an 'X' in that index of the String, indicting a cavity 
+	*/
+    
     public static String cavity(String map){
-        //starts at 1 because can't have a cavity at the corner + we avoid the array out of bounds exception
+        
         for(int i = 1; i < map.length() -1; i++){
             int current = Character.getNumericValue(map.charAt(i));
             int previous = Character.getNumericValue(map.charAt(i-1));
