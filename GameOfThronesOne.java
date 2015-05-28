@@ -12,11 +12,11 @@ public class Solution {
 	Step 2 - Keep track of 3 variables ..(variables explained in step 4)
 	Step 3 - put all characters occuring into a hashmap (Key: Character, Value: Number of Times Character Occurs In The String (integer value))
 	Step 4 - numOnes - Number of characters in the string that only appear once
-		     numOdd  - Number of characters in the string that appear an odd number of times
-			 numEven - Number of characters in the string that appear an even number of times
+		 numOdd  - Number of characters in the string that appear an odd number of times
+		 numEven - Number of characters in the string that appear an even number of times
 	Step 5: If more than one character only appears once, the stirng CANNOT be rearranged to form a palindrome
-			If numOdd <= numEven , the string can be rearranged to be a palindrome
-			else, it cannot
+		If numOdd <= numEven , the string can be rearranged to be a palindrome
+		else, it cannot
 		
 	*/
     
