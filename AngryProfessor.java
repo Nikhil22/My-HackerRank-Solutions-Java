@@ -8,7 +8,7 @@ public class Solution {
     
     	/*
 		
-	Loops through the arrivals array. 
+	Loop through the arrivals array. 
 	For each element in the array, if it's <=0, it implies that the particular student represented by that array element is on time
 	Incremenent the number of students who showed up on time
 	"NO" means the class should NOT be cancelled
