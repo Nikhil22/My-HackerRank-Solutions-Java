@@ -6,6 +6,13 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+	
+	If there are an even number of cuts k, return (k/2) * (k/2)
+	Otherwise, return ((k-1)/2) *((k-1)/2) + (k-1)/2
+		
+	*/
+    
     static int maxChoc(int k){
         //base case
         if(k == 1){
