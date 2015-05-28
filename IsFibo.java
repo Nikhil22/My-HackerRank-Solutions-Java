@@ -6,24 +6,37 @@ import java.util.regex.*;
 
 
 public class Solution {
+	
+	/*
+	Step 1: Find 2 numbers (call them int n, nLess) that sum to our input x, 
+			such that it makes sense in a fibonacci sense - What do I mean by that?...
+			The difference between n and nLess cannot greater than nLess (to satisfy fibonacci sequence)
+			So we now have nLess, n, x , which satisfy fibo incremental conditions
+	Step 2: Now it's easy to find the number that comes before nLess (call it nEvenLess)
+			While nEvenLess > 0, decrement the values of nLess and nEvenLess such that they satisfy the fibo sequence
+	Step 3: If nEvenLess == 0, return "IsFibo" since 0 is the first number in the fibonacci sequence
+			else, return "IsNotFibo"
+			
+	*/
     
     static String isFibo(int x){
         int n = x - 1;
-        int nMinusOne = 1;
+        int nLess = 1;
         
-        while ((n - nMinusOne) > nMinusOne){
+        while ((n - nLess) > nLess){
             n--;
-            nMinusOne++;
+            nLess++;
         }
         
-        int nMinusTwo = n - nMinusOne;
-        while(nMinusTwo >0){
-            int temp = nMinusTwo; 
-            nMinusTwo = nMinusOne - nMinusTwo;
-            nMinusOne = temp;
+        
+        int nEvenLess = n - nLess;
+        while(nEvenLess >0){
+            int temp = nEvenLess; 
+            nEvenLess = nLess - nEvenLess;
+            nLess = temp;
         }
         
-        if(nMinusTwo == 0){
+        if(nEvenLess == 0){
             return "IsFibo";
         }else{
             return "IsNotFibo";
