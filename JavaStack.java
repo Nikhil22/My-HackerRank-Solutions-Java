@@ -12,7 +12,7 @@ public class Solution {
 	If the character in the string is none of the above, then peek at the top of the stack
 		If the top of the stack does NOT contain the matching opening bracket, (ie. '{' matches '}'), return false
 		Else, pop it off the stack
-	Once string has been looped through, check if the stack is empty
+	Once the string has been looped through, check if the stack is empty
 	If the stack is empty, return true 
 	Else, return false
 	*/
