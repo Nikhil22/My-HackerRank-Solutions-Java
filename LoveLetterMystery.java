@@ -6,6 +6,21 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+	Loop through the string - Start from the middle index(es) of the string (we will start our loop from here)
+	Keep track of 3 variables:
+		minOps = the minimum number of operations needed to convert the string to a palindrome
+		startIndexLeft - keeps track of the index when looping through the LEFT half of the string (thus, decrement value as we loop)
+		startIndexRight - keeps track of the index when looping through the RIGHT half of the string (thus, increment value as we loop)
+	Loop through the string (while startIndexLeft >= 0, or startIndexRight <string.length)
+	Keep track of the numerical values of the characters in the startIndexLeft & startIndexRight indexes
+		leftCharVal - numerical value of character on the left side of the string, at index startIndexLeft
+		rightCharVal - numerical value of character on the right side of the string, at index startIndexRight
+	If the leftCharVal != rightCharVal, we must find the number of operations needed to make these values equal to each other
+	Therefore, increment minOps by the absolute value of leftCharVal - rightCharValue
+	
+	*/
+    
     static int minOperations(String abc){
         int minOps = 0;
         int startIndexLeft = 0;
