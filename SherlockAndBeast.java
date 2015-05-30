@@ -46,10 +46,10 @@ public class Solution{
                 }
             }
             else{
-			System.out.print(-1);
-			}
-
+		   System.out.print(-1);
 		}
+
+	  }
 	}
 	
 	public static void main(String[] args){
