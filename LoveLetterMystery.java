@@ -5,67 +5,42 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
-    
-    /*
-	Loop through the string - Start from the middle index(es) of the string (we will start our loop from here)
-	Keep track of 3 variables:
-		minOps = the minimum number of operations needed to convert the string to a palindrome
-		startIndexLeft - keeps track of the index when looping through the LEFT half of the string (thus, decrement value as we loop)
-		startIndexRight - keeps track of the index when looping through the RIGHT half of the string (thus, increment value as we loop)
-	Loop through the string (while startIndexLeft >= 0, or startIndexRight <string.length)
-	Keep track of the numerical values of the characters in the startIndexLeft & startIndexRight indexes
-		leftCharVal - numerical value of character on the left side of the string, at index startIndexLeft
-		rightCharVal - numerical value of character on the right side of the string, at index startIndexRight
-	If the leftCharVal != rightCharVal, we must find the number of operations needed to make these values equal to each other
-	Therefore, increment minOps by the absolute value of leftCharVal - rightCharValue
 	
-	*/
+   /*
+   Initialize three variables
+   	int minOperations = 0; The minimum number of operations
+   	int rightEnd = string.length() - 1 ... The index we start off at, at the very right (end) of the string
+   	int leftEnd = string.length() - 1 ... The index we start off at, at the very left (beginning) of the string
+   Loop through the string while (leftEnd < rightEnd)
+   Initialize 2 variables inside the loop - Right at the beggining of the loop
+   	rightVal - the numeric value of the character in the 'rightEnd' index of the string
+   	leftVal - the numeric value of the character in the 'leftEnd' index of the string
+   Increment minOperations by the absolute value of rightVal - leftVal
+   Increment leftEnd and decrement rightEnd and 
+   Once the loop is complete, output minOperations
+   */
     
-    static int minOperations(String abc){
-        int minOps = 0;
-        int startIndexLeft = 0;
-        int startIndexRight = 0;
-        if(abc.length() % 2 == 0 && abc.length() >= 2){
-            startIndexLeft = (abc.length())/2 - 1;
-            startIndexRight = startIndexLeft + 1;
-            
-   
-            //check if the starting two middle points are equal (to ensure palindrome)
-            if(Character.getNumericValue(abc.charAt(startIndexLeft)) != Character.getNumericValue(abc.charAt(startIndexRight))){
-                minOps += Math.abs(Character.getNumericValue(abc.charAt(startIndexLeft)) - Character.getNumericValue(abc.charAt(startIndexRight)));
-                startIndexLeft--;
-                startIndexRight++;
-            }
-                while(startIndexLeft >= 0){
-                   minOps += Math.abs(Character.getNumericValue(abc.charAt(startIndexLeft)) - Character.getNumericValue(abc.charAt(startIndexRight)));
-                    
-                    startIndexLeft--;
-                    startIndexRight++;
-                }
-           
-        }else if(abc.length() % 2 != 0 && abc.length() >= 2){
-            startIndexLeft = (abc.length() -1)/2 -1;
-            startIndexRight = (abc.length() -1)/2 +1;
-            
-            while(startIndexLeft >= 0){
-                    minOps += Math.abs(Character.getNumericValue(abc.charAt(startIndexLeft)) - Character.getNumericValue(abc.charAt(startIndexRight)));
-                    startIndexLeft--;
-                    startIndexRight++;
-                }
+    static int minOps(String abc){
+        int minOperations = 0;
+        int rightEnd = abc.length() -1;
+        int leftEnd = 0;
         
+        while(leftEnd < rightEnd){
+            int rightVal = Character.getNumericValue(abc.charAt(rightEnd));
+            int leftVal = Character.getNumericValue(abc.charAt(leftEnd));
+            minOperations += Math.abs(rightVal - leftVal);
+            leftEnd++;
+            rightEnd--;
         }
         
-       return minOps;
-       
+        return minOperations;
     }
-    
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int T = in.nextInt();
         for(int i = 0; i < T; i++){
-            String abc = in.next();
-            System.out.println(minOperations(abc));
+            System.out.println(minOps(in.next()));
         }
     }
 }
