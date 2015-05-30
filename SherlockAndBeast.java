@@ -20,16 +20,16 @@ public class Solution{
     */
     
 	static void fiveThree(int num){
-		if(num % 3 == 0){
-			for(int i = 0; i < num; i++){
-				System.out.print(5);
-			}
-		}else {
-			int num3 = 5; //number of 3's (a multiple of 5)
+	if(num % 3 == 0){
+	for(int i = 0; i < num; i++){
+		System.out.print(5);
+	}
+	}else {
+	int num3 = 5; //number of 3's (a multiple of 5)
             
-			while((num - num3) % 3 != 0 && (num - num3) > 0){
-				num3 = num3 + 5;
-			}
+	while((num - num3) % 3 != 0 && (num - num3) > 0){
+		num3 = num3 + 5;
+	}
                        
             if((num - num3) % 3 == 0 && (num - num3) != 0){
                 for(int i = 0; i < num; i++){
@@ -44,8 +44,7 @@ public class Solution{
                 for(int i = 0; i < num3; i++){
                     System.out.print(3);
                 }
-            }
-            else{
+            }else{
 		   System.out.print(-1);
 		}
 
