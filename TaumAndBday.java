@@ -6,6 +6,15 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+    int B - number of black gifts
+    int W - number of white gifts
+    int X - cost of black gift (measured in arbitrary units)
+    int Y - cost of white gift (measured in arbitrary units)
+    int Z - cost to convert a gift to the other color
+    int min - variable that keep tracks of the minimum amount of units needed to be spent
+    */
+    
     static int min(int B, int W, int X, int Y, int Z){
         int min = 0;
         if(Z < Y || Z < X && Math.abs(X-Y) >= Z){
