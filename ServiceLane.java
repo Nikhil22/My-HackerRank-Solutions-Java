@@ -6,6 +6,15 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+	Call the input array 'a'
+	For this challenge, we are simply required to find smallest number in the array between index i and j (both inclusive)
+	Let's start off by assuming that the a[i] is the minimum (so, int min = a[i])
+	Loop through the array starting at index i + 1, until index >= j
+	For each element of the array, set min: min = Math.min(min, a[x]); This ensures we find the minimum number
+	Output min
+	*/
+    
     static int largestVehicle(int[] a, int i, int j){
         int min = a[i];
         for(int x = i+1; x <=j; x++){
