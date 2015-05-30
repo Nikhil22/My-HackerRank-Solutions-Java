@@ -6,23 +6,31 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+    Keep track of 5 variables
+        sum - our total sum
+        mostOccurances - The maximum number of times a particular number (other than 0) can occur on a stone
+        leastOccurances - The minimum number of times a particular number (other than 0) can occur on a stone
+        largeIncrement - The larger of the 2 numbers (a, b) that we must increment our sum by
+        smallIncrement - The smaller of the 2 numbers (a, b) that we must increment our sum by
+    Since we must print all possible sums in ASCENDING order...
+    Start off with the smallest possible sum; That is, if ALL the rocks contained the smaller of a & b
+    Loop while mostOccurances >=0 or leastOccurances < n
+    Print out the sum: mostOccurances*smallIncrement + leastOccurances*largeIncrement
+    Decrement mostOccurances and increment leastOccurances (so that the sum gets gradually larger)
+    */
+    
     static void outcomes(int n, int a, int b){
         int sum = 0;
-        int aTimes = 0;
-        int bTimes = 0;
-        if( a > b){
-            bTimes = n-1; 
-            aTimes = 0;
-        }else if(a < b){
-            aTimes = n-1;
-            bTimes = 0;
-        }else{
+        
+        //base case
+        if(a == b){
             sum = a *(n-1);
             System.out.print(sum);
         }
         
-        int mostOccurances = Math.max(aTimes, bTimes);
-        int leastOccurances = Math.min(aTimes, bTimes);
+        int mostOccurances = n-1;
+        int leastOccurances = 0;
         int smallIncrement = Math.min(a,b);
         int largeIncrement = Math.max(a,b);
         while(mostOccurances >=0 || leastOccurances < n){
