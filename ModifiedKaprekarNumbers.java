@@ -6,6 +6,27 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+    isKaprekar:
+    1. 2 inputs: n, nSq
+    2. n - the number (9, for exmaple)
+    3. nSq - the square of n (81, for example)
+    4. Loop through the string nSq
+    5. Divide the string into a right half and a left half (if the length of nSq is odd, skip to step 9)
+    6. Check if the integer value of the characters on the right half = integer value of the characters on the left half
+    7. Also be weary that 0 is not a kaprekar number, as it is non-positive
+    8. If yes to step 6, it is a kaprekar number 
+    9. The right half could contain more OR less characters than the left side
+        ie. (length = 3, number = 205, right half could be '2', OR '20')
+    10. To account for both possibilities, we have our rCatch & lCatch
+        rString assumes that the right side of the string is larger than the left side
+            (ie,number = 205, right side = '20', left side = '5')
+        rCatch assumes that the right side of the string is smaller than the left side
+            (ie,number = 205, right side = '2', left side = '05')
+         Therefore, lCatch assumes that the left side is larger. lString assumes that the left side is smaller
+    11. Refer to step 6
+    */
+    
     static boolean isKaprekar(int n, int nSq){
         String nString = Integer.toString(n);
         String nSqString = Integer.toString(nSq);
