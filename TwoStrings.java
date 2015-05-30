@@ -6,18 +6,22 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+    boolean isCommon - Is the particular character common between both strings (string a, string b)
+    */
+    
     static String commonString(String a, String b){
-        boolean common = false;
-        int i = 0;
-        while(!common && i <b.length()){
+        boolean isCommon = false;
+        int index = 0;
+        while(!isCommon && index <b.length()){
            
-                if(a.contains(String.valueOf(b.charAt(i)))){
-                    common = true;
+                if(a.contains(String.valueOf(b.charAt(index)))){
+                    isCommon = true;
                 }
-            i++;
+            index++;
         }
         
-        if(common){
+        if(isCommon){
             return "YES";
         }else{
            return "NO"; 
