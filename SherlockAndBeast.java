@@ -21,9 +21,9 @@ public class Solution{
     
 	static void fiveThree(int num){
 	if(num % 3 == 0){
-	for(int i = 0; i < num; i++){
-		System.out.print(5);
-	}
+	   for(int i = 0; i < num; i++){
+		   System.out.print(5);
+	   }
 	}else {
 	int num3 = 5; //number of 3's (a multiple of 5)
             
