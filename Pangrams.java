@@ -6,6 +6,15 @@ import java.util.regex.*;
 
 public class Solution {
     
+    /*
+	Create a string that contains every letter of the alphabet
+	Convert our input string 's' to lower case so that we don't have to worry about case sensitivity 
+	Loop through the alphabet string
+	For each letter of the alphabet string , check if 's' contains that letter
+	If 's' does not contain the letter, 's' is NOT a pangram
+	If loop is finished and 's' contained all letters of the alphabet, 's' is a pangram
+	*/
+    
     static void isPangram(String s){
       String abc = "abcdefghijklmnopqrstuvwxyz";
       String sLowerCase = s.toLowerCase();
