@@ -6,6 +6,10 @@ import java.util.regex.*;
 
 public class Solution {
 	
+	/*NOTE* The following algorithm is without the use of the xor operator (^). 
+	For my solution to this problem using the xor operator, see 'MaximizingXor.java' under 
+	'My-HackerRank-Solutions-java' */
+	
 	/*
 	Pseudocode for xor() method 
 	1. Convert integer inputs a and b into binary strings aBin and bBin
