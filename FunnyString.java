@@ -7,10 +7,10 @@ import java.util.regex.*;
 public class Solution {
     
     /*
-	Loop through the string on 2 seperate ends (therefore, use two seperate variables to keep track of the index)
-	On the left ends, calculate the difference (absolute value) between 
+	Loop through the string on 2 seperate ends (for clarity, use two seperate variables to keep track of the index)
+	On the left end, calculate the difference (absolute value) between 
 	the current character and the character in the previous index
-	On the left ends, calculate the difference (absolute value) between
+	On the right end, calculate the difference (absolute value) between
 	the current character and the character in the next index
 	Check if these values are equal (or nah)
 	If these values are not equal, exit loop - this is NOT a funny string
