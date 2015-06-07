@@ -6,8 +6,8 @@ import java.util.regex.*;
 
 public class Solution {
 	
-	static int maxXor(int a, int b){
-       int max =0;
+     static int maxXor(int a, int b){
+       	int max =0;
        
        while(a <= b){
            int j = a;
