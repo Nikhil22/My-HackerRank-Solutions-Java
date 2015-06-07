@@ -73,8 +73,8 @@ public class Solution {
         int lSumCatch = Integer.parseInt(lCatch);
         
         //acounts for 0's (as they are non positive integers)
-        if(((rSum + lSum == n) && numSqDigs > 1 && lSum !=0) || ((rSum + lSum == n) && numSqDigs <= 1)
-          || ((rSumCatch + lSumCatch == n) && numSqDigs > 1 && rSumCatch !=0) 
+        if(((rSum + lSum == n) && lSum !=0) || ((rSum + lSum == n) && numSqDigs <= 1)
+          || ((rSumCatch + lSumCatch == n) && rSumCatch !=0) 
           || ((rSumCatch + lSumCatch == n) && numSqDigs <= 1)){
             return true;
         }else{
