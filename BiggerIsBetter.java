@@ -7,9 +7,16 @@ import java.util.regex.*;
 public class Solution {
     
     	/*
-	Loop through the string; Keep track of 2 variables (Explained below)	
+	Keep track of 2 variables (Explained below)	
 	int startEnd - The end index of the string that we start from
-	int compareWith - the index in the array that holds the character that we will compare the character found in index 'startEnd' with
+	int compareWith - the index in the string that holds the character that we will compare the character found in index 'startEnd' with
+	Loop through the string; 2 Loops 
+	Outer Loop: Loop while startEnd > 0
+	Inner Loop: Loop while compareWith >= 0 
+		Compare the the character found at startEnd with the characters found in the compareWith indexes
+		Decrement compareWith by 1 for each inner loop
+	Decrement startEnd by 1 for each outer loop
+	Reset compareWith (compareWith = startEnd - 1) for each outer loop
 	Keep comparing until we reach the end of the string
 	IF AT ANY POINT during the loops, the char in index 'startEnd' is alphabetically > than the char in index 'compareWith', return accordingly (refer to return statement in the code)
 		
