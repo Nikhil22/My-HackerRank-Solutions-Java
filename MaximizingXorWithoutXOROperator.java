@@ -62,8 +62,8 @@ public class Solution {
                     }
                 }else {
 					
-					if((bBin.charAt(i) == '1' && aBin.charAt(i - (longer - smaller)) == '0') 
-                   		|| (bBin.charAt(i) == '0' && aBin.charAt(i - (longer - smaller)) == '1')){
+			if((bBin.charAt(i) == '1' && aBin.charAt(i - (longer - smaller)) == '0') 
+                   	|| (bBin.charAt(i) == '0' && aBin.charAt(i - (longer - smaller)) == '1')){
                     
                     		xor = xor + "1";                    
                 		}else{
