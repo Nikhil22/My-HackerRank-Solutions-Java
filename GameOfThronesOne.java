@@ -1,4 +1,3 @@
-//Game of Thrones 
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -11,10 +10,11 @@ public class Solution {
 	Step 1 - Loop through entire stirng
 	Step 2 - Keep track of 3 variables ..(variables explained in step 4)
 	Step 3 - put all characters occuring into a hashmap (Key: Character, Value: Number of Times Character Occurs In The String (integer value))
-	Step 4 - numOnes - Number of characters in the string that only appear once
+	Step 4 - 
+		 numOnes - Number of characters in the string that only appear once
 		 numOdd  - Number of characters in the string that appear an odd number of times
 		 numEven - Number of characters in the string that appear an even number of times
-	Step 5: If more than one character only appears once, the stirng CANNOT be rearranged to form a palindrome
+	Step 5: If more than one character only appears once, the string CANNOT be rearranged to form a palindrome
 		If numOdd <= numEven , the string can be rearranged to be a palindrome
 		else, it cannot
 		
@@ -30,7 +30,7 @@ public class Solution {
             if(map.containsKey(s.charAt(i))){
                 map.put(s.charAt(i), map.get(s.charAt(i)) + 1);
                 
-                if(numOnes >= 1){
+                if(numOnes >= 1 && map.get(s.charAt(i)) == 2){
                    numOnes--;
                 }
                 
