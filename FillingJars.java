@@ -10,7 +10,7 @@ public class Solution {
     /*
     Initialize 2 variables
         int sum: Keeps track of the total sum
-        int row: Keeps track of the current row in the 2d jars[][] array input
+        int row: Keeps track of the current row in the 2D jars[][] array input
     Loop through the array
         For each row, we know the following:
         'a' and 'b' are indices of the jar (both inclusive)
