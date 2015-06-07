@@ -11,7 +11,7 @@ public class Solution {
 	Keep track of the number of chocolates as well as the number of wrappers you have
 	The number of wrappers you have must initially equal the number of chocolates you have (or ate)
 	Loop while you have at least as many wrappers needed for a voucher for a free chocolate
-	Increment number of total chocolates; also increment wrappers
+		Increment number of total chocolates; also increment wrappers for each loop
 	*/
 
     public static void main(String[] args) {
