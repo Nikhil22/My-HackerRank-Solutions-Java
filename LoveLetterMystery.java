@@ -12,11 +12,8 @@ public class Solution {
    	int rightEnd = string.length() - 1 ... The index we start off at, at the very right (end) of the string
    	int leftEnd = string.length() - 1 ... The index we start off at, at the very left (beginning) of the string
    Loop through the string while (leftEnd < rightEnd)
-   Initialize 2 variables inside the loop - Right at the beggining of the loop
-   	rightVal - the numeric value of the character in the 'rightEnd' index of the string
-   	leftVal - the numeric value of the character in the 'leftEnd' index of the string
-   Increment minOperations by the absolute value of rightVal - leftVal
-   Increment leftEnd and decrement rightEnd and 
+   Increment minOperations by the absolute value of the character at the index 'rightEnd' - the character at the index 'leftEnd'
+   Increment leftEnd and decrement rightEnd 
    Once the loop is complete, output minOperations
    */
     
@@ -26,9 +23,7 @@ public class Solution {
         int leftEnd = 0;
         
         while(leftEnd < rightEnd){
-            int rightVal = Character.getNumericValue(abc.charAt(rightEnd));
-            int leftVal = Character.getNumericValue(abc.charAt(leftEnd));
-            minOperations += Math.abs(rightVal - leftVal);
+            minOperations += Math.abs(abc.charAt(rightEnd) - abc.charAt(leftEnd));
             leftEnd++;
             rightEnd--;
         }
