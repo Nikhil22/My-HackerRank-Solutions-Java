@@ -10,7 +10,8 @@ public class Solution{
     Let input = 'num'
     Step 1: Check if the num is divisible by 3. If so, print 'num' number of 5's
     If the above 'if' statement did not return true, proceed to step 2...
-    Step 2: Check how many 3's (represented by int num3) can go into 'num' by working backwards (to ensure that we can still print out 5's if possible). To do this, loop while (num - num3) % 3 !=0. Increment num3
+    Step 2: Check how many 3's (represented by int num3) can go into 'num' by working backwards (to ensure that we can still print out as many 5's as possible, if possible). 
+    To do this, loop while (num - num3) % 3 !=0. Increment num3
     This way, loop exits as soon as num - num3 is no longer divisible by 3, which possibly leaves us room to check if we can print out some 5's
     Step 3: If num-num3 is divisible by 3, print (num-num3) number of 5's
             Then print num3 number of 3's
