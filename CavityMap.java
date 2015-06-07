@@ -16,9 +16,9 @@ public class Solution {
     public static String cavity(String map){
         
         for(int i = 1; i < map.length() -1; i++){
-            int current = Character.getNumericValue(map.charAt(i));
-            int previous = Character.getNumericValue(map.charAt(i-1));
-            int next = Character.getNumericValue(map.charAt(i+1));
+            int current = map.charAt(i);
+            int previous = map.charAt(i-1);
+            int next = map.charAt(i+1);
             
             if(current > previous && current > next){
                 map = map.substring(0,i) + 'X' + map.substring(i+1);
