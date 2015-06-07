@@ -36,7 +36,7 @@ public class Solution {
         If true, check if bBin.charAt(i) == '1' 
 		  If true, append our xor string: xor = xor + "1"
 		  If false, append our xor string: xor = xor + "0"
-	8. If the condition in step 10 is false,
+	8. If the condition in step 7 is false,
 		Check if bBin.charAt(i) and aBin.charAt(i - (longer - smaller)) satisfy the XOR conditions
 		If true, append our xor string: xor = xor + "1"
 		If false, append our xor string: xor = xor + "0"
@@ -69,7 +69,7 @@ public class Solution {
                 		}else{
                     		xor = xor + "0";
                 		}
-				}
+                }
             }
         
         return Integer.parseInt(xor, 2); 
