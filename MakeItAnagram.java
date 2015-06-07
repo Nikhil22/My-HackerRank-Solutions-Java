@@ -12,7 +12,7 @@ public class Solution {
 	Loop through string 'b'
 	For each character in string 'b', check if string 'a' contains that character
 	If string 'a' does not contain the character, increment deletions by 1
-	Return deletions * 2 because for every character we delete from one string, we must delete oe from the other string
+	Return deletions * 2 because for every character we delete from one string, we must delete one from the other string
 	*/
     
     static int deletions(String a, String b){
