@@ -12,15 +12,16 @@ public class Solution {
 	Keep track of the minimum (should be array[0] since it has been sorted)	
 	Loop through the array, and subtract the minimum from each element of the array
 	Keep track of the number of 0's that result from this subtraction
-	If the result of thr subtraction is NOT == 0, this indicates we have reached a value higher than our minimum
+	If the result of the subtraction is NOT == 0, this indicates we have reached a value higher than our minimum
 	Thus, assign this new value to the minimum.
+	Print out the number of cuts (cuts - zeros)
 	Repeat this process until the entire array has been looped through 
 	
 	*/
     
     static void stix(int[] a){
         int cuts = a.length;
-        System.out.println(cuts);
+        System.out.println(cuts); //Start off with every 'stick' in the array getting cut
         int zeros = 0;
         Arrays.sort(a);
         int min = a[0];
