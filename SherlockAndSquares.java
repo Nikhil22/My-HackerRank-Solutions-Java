@@ -13,7 +13,7 @@ public class Solution {
         If true, loop while (num1 >= num2)
         Check if the square root of num2 is perfectly divisible by 1 (to see if it's an integer)
         If true, increment count
-        If false, increment num2
+        For each loop, increment num2
     Step 2. If the condition in step 1 returned false...
         Do the exact same steps under Step 1, except replace num1 with num2 everywhere
     Step 3. Output the count 
